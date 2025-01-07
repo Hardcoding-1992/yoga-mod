@@ -1,0 +1,39 @@
+name: Validate Apple
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - 'release-*'
+  workflow_dispatch:
+
+jobs:
+  lint-pods:
+    name: Build [CocoaPods]
+    runs-on: macos-13
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup
+        uses: ./.github/actions/setup-apple
+
+      - name: pod lib lint
+        run: pod lib lint --verbose --include-podspecs=**/*.podspec
+
+  test:
+    name: Build [SwiftPM]
+    runs-on: macos-13
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup
+        uses: ./.github/actions/setup-apple
+
+      - name: Build Debug
+        run: swift build -c debug
+
+      - name: Build Release
+        run: swift build -c release

@@ -1,0 +1,27 @@
+---
+sidebar_position: 3
+---
+
+import Playground from '@site/src/components/Playground';
+
+# Aspect Ratio
+
+The aspect ratio property in Yoga has the following properties:
+
+- Accepts any floating point value > 0, the default is undefined.
+- Defined as the ratio between the [width](/docs/styling/width-height) and the [height](/docs/styling/width-height) of a node e.g. if a node has an aspect ratio of 2 then its [width](/docs/styling/width-height) is twice the size of its [height](/docs/styling/width-height).
+- Respects the [min](/docs/styling/min-max-width-height) and [max](/docs/styling/min-max-width-height) dimensions of an item.
+- Has higher priority than [flex grow](/docs/styling/flex-basis-grow-shrink)
+- If aspect ratio, [width](/docs/styling/width-height), and [height](/docs/styling/width-height) are set then the cross axis dimension is overridden.
+
+<Playground code={`<Layout config={{useWebDefaults: false}}>
+  <Node
+    style={{
+      width: 200,
+      height: 200,
+      padding: 10,
+    }}>
+    <Node style={{margin: 5, height: 50, aspectRatio: 1.0}} />
+    <Node style={{margin: 5, height: 50, aspectRatio: 1.5}} />
+  </Node>
+</Layout>`} />

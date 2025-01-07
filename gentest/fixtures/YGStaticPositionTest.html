@@ -1,0 +1,712 @@
+<!-- The top level divs in each test are needed so that each div overlays each
+     other and the top measurement is accurate -->
+<div id="static_position_insets_have_no_effect_left_top">
+    <div style="width: 100px; height: 100px; position: static; top: 50px; left: 50px;">
+    </div>
+</div>
+
+<div id="static_position_insets_have_no_effect_right_bottom">
+    <div style="width: 100px; height: 100px; position: static; bottom: 50px; right: 50px;">
+    </div>
+</div>
+
+<div id="static_position_absolute_child_insets_relative_to_positioned_ancestor">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height: 100px; width: 100px; margin-left: 100px; position: static">
+            <div style="height: 50px; width: 50px; position: absolute; top: 50px; left: 50px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_insets_relative_to_positioned_ancestor_row_reverse">
+    <div style="width: 200px; height: 200px; position: relative; flex-direction: row-reverse">
+        <div style="height: 100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; position: absolute; top: 50px; left: 50px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="column_reverse_static_position_absolute_child_insets_relative_to_positioned_ancestor_row_reverse">
+    <div style="width: 200px; height: 200px; position: relative; flex-direction: row-reverse">
+        <div style="height: 100px; width: 100px; position: static; flex-direction: column-reverse">
+            <div style="height: 50px; width: 50px; position: absolute; top: 50px; left: 50px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_insets_relative_to_positioned_ancestor_row">
+    <div style="width: 200px; height: 200px; position: relative; flex-direction: row">
+        <div style="height: 100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; position: absolute; top: 50px; right: 50px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="column_reverse_static_position_absolute_child_insets_relative_to_positioned_ancestor_row">
+    <div style="width: 200px; height: 200px; position: relative; flex-direction: row">
+        <div style="height: 100px; width: 100px; position: static; flex-direction: column-reverse">
+            <div style="height: 50px; width: 50px; position: absolute; top: 50px; right: 50px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_insets_relative_to_positioned_ancestor_column_reverse">
+    <div style="width: 200px; height: 200px; position: relative; flex-direction: column-reverse">
+        <div style="height: 100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; position: absolute; top: 50px; right: 50px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="column_reverse_static_position_absolute_child_insets_relative_to_positioned_ancestor_column_reverse">
+    <div style="width: 200px; height: 200px; position: relative; flex-direction: column-reverse">
+        <div style="height: 100px; width: 100px; position: static; flex-direction: column-reverse">
+            <div style="height: 50px; width: 50px; position: absolute; top: 50px; right: 50px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_insets_relative_to_positioned_ancestor_deep">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height: 100px; width: 100px; margin-left: 100px; position: static">
+            <div style="height: 100px; width: 100px; margin-left: 100px; position: static">
+                <div style="height: 100px; width: 100px; margin-left: 100px; position: static">
+                    <div style="height: 100px; width: 100px; margin-left: 100px; position: static">
+                        <div style="height: 50px; width: 50px; position: absolute; top: 50px; left: 50px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_width_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50%; position: absolute">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_relative_child_width_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50%; position: relative">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_static_child_width_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50%; position: static">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_height_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50%; width: 50px; position: absolute">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_relative_child_height_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50%; width: 50px; position: relative">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_static_child_height_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50%; width: 50px; position: static">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_left_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; left: 50%; position: absolute">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_relative_child_left_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; left: 50%; position: relative">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_static_child_left_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; left: 50%; position: static">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_right_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; right: 50%; position: absolute">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_relative_child_right_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; right: 50%; position: relative">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_static_child_right_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; right: 50%; position: static">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_top_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; top: 50%; position: absolute">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_relative_child_top_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; top: 50%; position: relative">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_static_child_top_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; top: 50%; position: static">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_bottom_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; bottom: 50%; position: absolute">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_relative_child_bottom_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; bottom: 50%; position: relative">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_static_child_bottom_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; bottom: 50%; position: static">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_margin_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; margin: 50%; position: absolute">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_relative_child_margin_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; margin: 50%; position: relative">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_static_child_margin_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; margin: 50%; position: static">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_padding_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; padding: 50%; position: absolute">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_relative_child_padding_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; padding: 50%; position: relative">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_static_child_padding_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; padding: 50%; position: static">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_border_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; border: 50%; position: absolute">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_relative_child_border_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; border: 50%; position: relative">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_static_child_border_percentage">
+    <div style="width: 200px; height: 200px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50px; border: 50%; position: static">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_containing_block_padding_box">
+    <div style="width: 400px; height: 400px; padding: 100px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50%; position: absolute">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_relative_child_containing_block_padding_box">
+    <div style="width: 400px; height: 400px; padding: 100px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50%; position: relative">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_static_child_containing_block_padding_box">
+    <div style="width: 400px; height: 400px; padding: 100px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50%; position: static">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_absolute_child_containing_block_content_box">
+    <div style="width: 400px; height: 400px; padding: 100px; position: relative">
+        <div style="height:50px; width: 50%; position: absolute">
+        </div>
+    </div>
+</div>
+
+<div id="static_position_relative_child_containing_block_content_box">
+    <div style="width: 400px; height: 400px; padding: 100px; position: relative">
+        <div style="height:50px; width: 50%; position: relative">
+        </div>
+    </div>
+</div>
+
+<div id="static_position_static_child_containing_block_content_box">
+    <div style="width: 400px; height: 400px; padding: 100px; position: relative">
+        <div style="height:50px; width: 50%; position: static">
+        </div>
+    </div>
+</div>
+
+<div id="static_position_containing_block_padding_and_border">
+    <div
+        style="width: 400px; height: 400px; padding: 8px 1px 4px 9px; border-width: 5px 7px 4px 2px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 61%; width: 41%; position: absolute">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Amalgamation here just means a bunch of random properties set like border, padding, and margin -->
+<div id="static_position_amalgamation">
+    <div
+        style="width: 500px; height: 500px; position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="height:200px; width: 200px; position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px">
+            <div
+                style="height: 63%; width: 41%; position: absolute; left: 2px; right: 12px; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_no_position_amalgamation">
+    <div
+        style="width: 500px; height: 500px; position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="height:200px; width: 200px; position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px">
+            <div
+                style="height: 63%; width: 41%; position: absolute; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_zero_for_inset_amalgamation">
+    <div
+        style="width: 500px; height: 500px; position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="height:200px; width: 200px; position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px">
+            <div
+                style="height: 63%; width: 41%; position: absolute; left: 0%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_start_inset_amalgamation">
+    <div
+        style="width: 500px; height: 500px; position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="height:200px; width: 200px; position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px">
+            <div
+                style="height: 63%; width: 41%; position: absolute; start: 12px; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_end_inset_amalgamation">
+    <div
+        style="width: 500px; height: 500px; position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="height:200px; width: 200px; position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px">
+            <div
+                style="height: 63%; width: 41%; position: absolute; end: 4px; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_row_reverse_amalgamation">
+    <div style="position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px; flex-direction: row-reverse;">
+            <div
+                style="position: absolute; height: 12%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_column_reverse_amalgamation">
+    <div style="position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px; flex-direction: column-reverse;">
+            <div
+                style="position: absolute; width: 21%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_justify_flex_start_amalgamation">
+    <div style="position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px; justify-content: flex-start;">
+            <div
+                style="position: absolute; width: 21%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+            <div
+                style="position: relative; width: 10%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+            <div
+                style="position: relative; width: 10%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_justify_flex_start_position_set_amalgamation">
+    <div style="position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px; justify-content: flex-start;">
+            <div
+                style="position: absolute; width: 21%; right: 30px; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+            <div
+                style="position: relative; width: 10%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+            <div
+                style="position: relative; width: 10%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_no_definite_size_amalgamation">
+    <div style="position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px">
+            <div
+                style="position: absolute; left: 23%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_both_insets_set_amalgamation">
+    <div style="position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px">
+            <div
+                style="position: absolute; left: 23%; right: 13px; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_justify_center_amalgamation">
+    <div style="position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px; justify-content: center;">
+            <div
+                style="position: absolute; width: 21%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+            <div
+                style="position: relative; width: 10%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+            <div
+                style="position: relative; width: 10%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_justify_flex_end_amalgamation">
+    <div style="position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px; justify-content: flex-end;">
+            <div
+                style="position: absolute; width: 21%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+            <div
+                style="position: relative; width: 10%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+            <div
+                style="position: relative; width: 10%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_align_flex_start_amalgamation">
+    <div style="position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px; align-items: flex-start;">
+            <div
+                style="position: absolute; width: 21%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+            <div
+                style="position: relative; width: 10%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+            <div
+                style="position: relative; width: 10%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_align_center_amalgamation">
+    <div style="position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px; align-items: center;">
+            <div
+                style="position: absolute; width: 21%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+            <div
+                style="position: relative; width: 10%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+            <div
+                style="position: relative; width: 10%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_align_flex_end_amalgamation">
+    <div style="position: relative; margin: 5px 9px 1px 4px; border-width: 6px 7px 8px 5px; padding: 9px 11px 13px 2px">
+        <div
+            style="position: static; margin: 6px 3px 9px 8px; border-width: 10px 2px 1px 8px; padding: 7px 9px 4px 1px; align-items: flex-end;">
+            <div
+                style="position: absolute; width: 21%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+            <div
+                style="position: relative; width: 10%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+            <div
+                style="position: relative; width: 10%; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                <div
+                    style="width: 100px; height: 50px; position: relative; margin: 12px 4px 7px 9px; border-width: 1px 5px 9px 2px; padding: 3px 8px 10px 5px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="static_position_static_root" style="height:200px; width: 100px; position: static; padding: 1px 11px 4px 6px;">
+    <div
+        style="height: 50%; width: 50%; position: absolute; border-width: 3px 2px 1px 4px; padding: 7px 5px 4px 3px; margin: 11px 15px 1px 12px">
+    </div>
+</div>
+
+<div id="static_position_absolute_child_multiple">
+    <div style="width: 400px; height: 400px; padding: 100px; position: relative">
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 10%; position: absolute">
+            </div>
+        </div>
+        <div style="height:100px; width: 100px; position: static">
+            <div style="height: 50px; width: 50%; position: absolute">
+            </div>
+            <div style="height: 50px; width: 50%; position: absolute">
+            </div>
+        </div>
+        <div style="height: 50px; width: 25px; position: absolute">
+        </div>
+    </div>
+</div>

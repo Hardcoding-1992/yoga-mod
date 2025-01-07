@@ -1,0 +1,130 @@
+/**
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+html[data-theme='light'] {
+  --yg-color-preview-background: var(--ifm-color-primary-lighter);
+  --yg-color-editor-border: var(--ifm-color-gray-400);
+  --yg-color-editor-fallback-bg: rgb(246, 248, 250);
+  --yg-color-editor-fallback-text: rgb(0, 0, 159);
+}
+
+html[data-theme='dark'] {
+  --yg-color-preview-background: var(--ifm-color-primary-dark);
+  --yg-color-editor-border: var(--ifm-color-gray-800);
+  --yg-color-editor-fallback-bg: rgb(40, 44, 52);
+  --yg-color-editor-fallback-text: rgb(209, 154, 102);
+}
+
+.wrapper {
+  min-width: 600px;
+  padding-block: 16px;
+}
+
+.playgroundRow {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+}
+
+.editorColumn {
+  flex: 8;
+  min-width: 0;
+  overflow-y: auto;
+  border: 1px solid var(--yg-color-editor-border);
+  border-radius: var(--ifm-pre-border-radius);
+  position: relative;
+}
+
+.editorScroll {
+ overflow-y: auto;
+}
+
+.editorToolbar {
+  position: absolute;
+  top: var(--ifm-pre-padding);
+  right: var(--ifm-pre-padding);
+}
+
+.playgroundEditor {
+  font: var(--ifm-code-font-size) / var(--ifm-pre-line-height)
+    var(--ifm-font-family-monospace) !important;
+  direction: ltr;
+  height: calc(var(--yg-playground-height) - 32px);
+}
+
+.playgroundEditor :global(.prism-code) {
+  box-shadow: var(--ifm-global-shadow-lw);
+  height: calc(var(--yg-playground-height) - 32px);
+  min-height: 300px;
+  border-radius: 0;
+  padding: var(--ifm-pre-padding) !important;
+}
+
+.liveEditorFallback {
+  background-color: var(--yg-color-editor-fallback-bg);
+  color: var(--yg-color-editor-fallback-text);
+}
+
+.previewColumn {
+  display: flex;
+  flex: 5;
+  height: calc(var(--yg-playground-height) - 32px);
+  min-height: 300px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--yg-color-preview-background);
+  overflow: hidden;
+  border-radius: var(--ifm-pre-border-radius);
+  align-self: stretch;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.livePreviewWrapper {
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.liveError {
+  align-self: flex-start;
+  font-size: 12px;
+  box-shadow: var(--ifm-global-shadow-lw);
+  background-color:var(--ifm-color-danger-darker);
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+}
+
+@media (max-width: 996px) {
+  .wrapper {
+    min-width: 100%;
+  }
+
+  .playgroundEditor {
+    height: unset;
+  }
+
+  .playgroundEditor :global(.prism-code) {
+    height: unset;
+    min-height: 10em;
+  }
+
+  .playgroundRow {
+    flex-direction: column;
+  }
+
+  .editorColumn {
+    padding: 0;
+    margin-bottom: 10px;
+    flex: unset;
+  }
+
+  .previewColumn {
+    padding: 10px;
+    width: 100%;
+    flex: unset;
+  }
+}

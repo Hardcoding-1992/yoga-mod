@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "esnext",
+    "strict": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    // TODO: moduleResolution: "nodenext" is buggy with this if the absolute
+    // path contains any capital letters
+    "forceConsistentCasingInFileNames": false,
+    "baseUrl": ".",
+    "moduleResolution": "nodenext",
+    "allowImportingTsExtensions": true,
+    "paths": {
+      "yoga-layout": ["src"]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "tests/**/*"
+  ]
+}
